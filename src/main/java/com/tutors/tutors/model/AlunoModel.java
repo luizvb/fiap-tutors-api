@@ -6,8 +6,6 @@ import javax.persistence.*;
 @Table(name = "aluno")
 public class AlunoModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic (optional = false)
     @Column(name = "codigo",unique=true)
     public Integer codigo;
 

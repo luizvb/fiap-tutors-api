@@ -5,18 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "tutor")
 public class TutorModel {
     @Id
     public Integer codigo;
 
-    @Column(nullable = false, length = 50)
+    @Column()
     public String nome;
 
-    @Column(nullable = false, length = 50)
+    @Column()
     public String especialidade;
 
-    @Column(nullable = false, length = 50)
+    @Column()
     public String status;
 
     public Integer getCodigo() {

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "atendimento")
 public class AtendimentoModel {
     @Id
@@ -12,15 +13,22 @@ public class AtendimentoModel {
     @Column(nullable = false, length = 50)
 
     public String atendimento;
-    @Column(nullable = false, length = 50)
+    @Column()
 
     public Integer tutorId;
 
-    @Column(nullable = false, length = 50)
+    @Column()
     public Integer alunoId;
 
-    @Column(nullable = false, length = 50)
-    public Integer roomId;
+    public String room_meet;
+
+    public String getRoom_meet() {
+        return room_meet;
+    }
+
+    public void setRoom_meet(String room_meet) {
+        this.room_meet = room_meet;
+    }
 
     public Integer getCodigo() {
         return codigo;
@@ -52,13 +60,5 @@ public class AtendimentoModel {
 
     public void setAlunoId(Integer alunoId) {
         this.alunoId = alunoId;
-    }
-
-    public Integer getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(Integer roomId) {
-        this.roomId = roomId;
     }
 }
